@@ -1,1 +1,285 @@
+# SDLC Process Manual
+
+
+## 1. Introduction
+
+**Purpose**: Provide a clear, repeatable process for software development that ensures quality, transparency, and adaptability.
+
+**Scope**: Applies to all projects managed by the Agile team, from small feature enhancements to new product development.
+
+**Audience**: Developers, QA engineers, Scrum Master, Product Owner, and stakeholders.
+
+**Standards Alignment**: Based on Agile principles, ISO/IEC 12207 (software lifecycle processes), and CMMI best practices.
+
+
+## 2. SDLC Overview
+
+**Definition**: The Software Development Life Cycle (SDLC) is a structured approach to building, testing, and deploying software.
+
+**Agile Adaptation**: Iterative, incremental delivery with continuous feedback.
+
+**Benefits**: Faster delivery, improved collaboration, reduced risk, and higher customer satisfaction.
+
+
+## 3. Guiding Principles
+
+- Deliver working software frequently.
+
+- Prioritize customer collaboration over contract negotiation.
+
+- Embrace change and continuous improvement.
+
+- Integrate security and compliance early (DevSecOps mindset).
+
+- Keep documentation lightweight but sufficient.
+
+
+## 4. SDLC Phases (Agile Context)
+
+**Phase** | **Agile Adaptation** | **Key Deliverables**
+
+Planning | Sprint planning, backlog refinement | Product backlog, sprint goals
+
+Requirements  | User stories, acceptance criteria | Groomed backlog, prioritized stories
+
+Design | Collaborative design sessions, architecture spikes | UML diagrams, wireframes, architecture notes
+
+Development | Pair programming, TDD, continuous integration | Source code, unit tests
+
+Testing | Automated tests, exploratory testing | Test reports, defect logs
+
+Deployment | Continuous delivery pipeline | Release notes, deployment checklist
+
+Maintenance | Bug fixes, enhancements | Change requests, updated backlog
+
+
+### 4.1. PHASE ONE: Initiation
+
+**Objective**: Surface, prioritize, and convert product ideas into a tracked story.
+
+The Product Team maintains a Backlog of ideas collected from users and stakeholders. In the Initiation Phase, the team selects a set of ideas to be developed. For each idea selected, the Product Owner drafts a brief story describing the proposed functionality. The system sets newly created stories to REQ status and automatically assigns the story to the author. The REQ status marks the transition to the Requirements Phase.
+
+
+### 4.2. PHASE TWO: Requirements
+
+**Objective**: Turn a prioritized idea into a complete story.
+
+The Product Owner gathers detailed requirements and completes the story — the formal description of what is to be developed. The story includes the following:
+
+- Acceptance Criteria, consisting of concrete, testable statements that define when the feature will be considered complete.
+
+- Non-functional requirements regarding any special performance, security, and compliance needs.
+
+- Flags for any risk assessments needed, such as architectural or security review.
+
+When the story is complete, the Product Owner assigns the story to a Developer on the Software Engineering Team and moves the story to DESIGN status.
+
+
+### 4.3. PHASE THREE: Design
+
+**Objective**: Define a producible technical solution.
+
+The Developer designs a technical solution and assigns the story to the Dev Lead to review the design against security, compliance, and scalability standards. The Dev Lead has two choices:
+
+- Reject the design, describe the improvements needed, and assign the story back to the Developer.
+
+- Approve the design, assign the story back to the Developer, and move the story to DEV status.
+
+
+### 4.4. PHASE FOUR: Development
+
+**Objective**: Implement the design as executable code.
+
+The Developer codes the solution and verifies its functionality locally. When ready, the Developer assigns the Story to a Code Reviewer to review the code against coding standards, and verify the completeness of required artifacts (unit tests, linters green, and architecture notes). The Code Reviewer has two choices:
+
+- Reject the coded solution, describe the improvements needed, and assign the story back to the Developer.
+
+- Approve the coded solution, assign the story to a QA (Quality Assurance) Tester, and move the Story to QA status.
+
+
+### 4.5. PHASE FIVE: Testing
+
+**Objective**: Verify the functionality against the story’s Acceptance Criteria.
+
+The QA Tester runs test cases derived from the Acceptance Criteria and exploratory tests focused on regression, edge cases, and nonfunctional concerns as needed. The QA Tester has two choices:
+
+- Reject the solution, document the failures, move the story back to DEV status, and assign it back to the Developer to re-code.
+
+- Approve the solution and assign it to the User Acceptance Group for UAT (User Acceptance Testing)
+
+The UAT Tester executes user-focused testing scenarios, and then has two choices:
+
+- Reject the solution, document the user-facing issues, move the story back to DEV status, and assign it back to the Developer to re-code.
+
+- Accept the solution, move the story to DEPLOY status, and assign it to the Product Owner.
+
+
+### 4.6. PHASE SIX: Deployment
+
+**Objective: Obtain release approval and move validated code into Production.
+
+When a Story reaches DEPLOY status, the Product Owner requests release approval from the Change Advisory Board (CAB). After CAB approval, the Software Engineering and QA teams jointly execute the deployment to the PRODUCTION environment, and QA moves the story into DONE status.
+
+
+### 4.8. Retrospective
+
+A post-deployment retrospective is a meeting held shortly after a deployment to review the development and release process. The goal is to identify what went well, what could be improved, and create actionable steps for future iterations. This practice drives a culture of continuous improvement.
+
+
+### 4.9. Maintenance
+
+After a successful deployment, the software enters the longest phase of its lifecycle: maintenance. During this stage, the focus shifts from new feature development to ensuring the software's continued operation, security, and relevance.
+
+
+### 4.10. Retirement
+
+The retirement phase marks the official end of the software's life cycle. This happens when the software is no longer needed, becomes obsolete, or is replaced by a newer system. A controlled retirement process minimizes disruption to the business and its users.
+
+
+## 5. Roles and Responsibilities
+
+The following details the duties associated with each role in the project, to ensure clarity and accountability.
+
+- **Product Owner** - Backlog prioritization, drafting Stories, collecting requirements, defining Acceptance Criteria, requesting CAB approval.
+
+- **Developer** - Designing and coding solutions, re-coding as needed.
+
+- **Dev Lead** - Design Review and approval authority.
+
+- **Code Reviewer** - Ensure code quality and adherence to standards before QA.
+
+- **QA Tester** - Validate functionality against Acceptance Criteria and report defects.
+
+- **UAT Tester** - Validate the feature from an end-user perspective and approve for deployment.
+
+- **Change Advisory Board** - Grant release approval for production deployment.
+
+
+## 6. Exceptions
+
+When addressing hotfixes and emergency deployments, the standard Software Development Life Cycle (SDLC) is bypassed to allow for rapid production releases to mitigate critical issues. Unlike a normal release, these deployments do not follow the full, multi-staged testing and approval process.
+
+- **Hotfix** - A focused patch created directly from the stable production branch to correct a specific, high-priority defect, such as a security vulnerability or system-wide crash.
+
+- **Emergency Deployment** - A temporary, reactive fix when a rollback is not feasible or to restore a known good state immediately.
+
+In both cases, the priority shifts from a comprehensive SDLC to minimizing downtime and restoring service stability, with documentation and full integration testing performed retroactively once the immediate incident is resolved.
+
+-------
+
+## 5. Roles & Responsibilities
+
+- **Product Owner**: Defines priorities, manages backlog.
+
+- **Scrum Master**: Facilitates ceremonies, removes impediments.
+
+- **Developers**: Implement features, write unit tests.
+
+- **QA/Testers**: Validate functionality, automate regression tests.
+
+- **Stakeholders**: Provide feedback, approve releases.
+
+
+## 6. Documentation Standards
+
+- **User Stories**: Written in “As a [role], I want [feature] so that [benefit].”
+
+- **Design Notes**: Lightweight diagrams stored in Confluence.
+
+- **Test Plans**: Automated test scripts plus exploratory notes.
+
+- **Release Notes**: One-page summary per sprint release.
+
+- **Change Logs**: Maintained in Git repository.
+
+
+## 7. Quality Assurance & Metrics
+
+- **Code Reviews**: Mandatory for all pull requests.
+
+- **Automated Testing**: Unit, integration, and regression tests in CI/CD pipeline.
+
+- **Metrics:
+
+    - Sprint velocity
+
+    - Defect density
+
+    - Deployment frequency
+
+    - Mean time to recovery (MTTR)
+
+
+## 8. Risk Management
+
+- **Risks: Scope creep, technical debt, resource constraints.
+
+Mitigation:
+
+- Regular backlog grooming
+
+- Technical spikes for unknowns
+
+- Retrospectives to address process issues
+
+
+## 9. Compliance & Security
+
+- **Secure Coding**: OWASP Top 10 awareness.
+
+- **Data Protection**: GDPR-compliant handling of user data.
+
+- **Security Testing**: Static code analysis, vulnerability scans integrated into CI/CD.
+
+
+## 10. Tools & Technology Stack
+
+- **Version Control**: GitHub
+
+- **Project Management**: Jira
+
+- **CI/CD**: GitHub Actions
+
+- **Documentation**: Confluence
+
+- **Testing**: Selenium, JUnit, Postman
+
+- **Monitoring**: Prometheus, Grafana
+
+
+## 11. Change & Configuration Management
+
+- **Change Requests**: Logged in Jira, approved by Product Owner.
+
+- **Versioning**: Semantic versioning (e.g., v1.2.3).
+
+- **Configuration**: Managed via Infrastructure as Code (Terraform, Ansible).
+
+
+## 12. Continuous Improvement
+
+- **Retrospectives**: Conducted at the end of each sprint.
+
+- **Feedback Loops**: Customer demos every sprint.
+
+- **Process Optimization**: Track bottlenecks and experiment with improvements.
+
+
+## 13. Appendices
+
+### Templates:
+
+- User Story Template
+
+- Test Case Template
+
+- Change Request Form
+
+### References:
+
+- ISO/IEC 12207 (Software Lifecycle Processes)
+
+- Agile Manifesto
+
+- CMMI for Development
 
