@@ -7,60 +7,43 @@
 
 **Scope**: Applies to all projects managed by the Agile team, from small feature enhancements to new product development.
 
-**Audience**: Developers, QA engineers, Scrum Master, Product Owner, and stakeholders.
+**Audience**: Business Owners, Product Owners, Developers, QA Testers, Scrum Masters, UAT Testers, and stakeholders.
 
 **Standards Alignment**: Based on Agile principles, ISO/IEC 12207 (software lifecycle processes), and CMMI best practices.
 
 
 ## 2. SDLC Overview
 
-**Definition**: The Software Development Life Cycle (SDLC) is a structured approach to building, testing, and deploying software.
-
-**Agile Adaptation**: Iterative, incremental delivery with continuous feedback.
-
-**Benefits**: Faster delivery, improved collaboration, reduced risk, and higher customer satisfaction.
-
-
-## 3. Guiding Principles
-
-- Deliver working software frequently.
-
-- Prioritize customer collaboration over contract negotiation.
-
-- Embrace change and continuous improvement.
-
-- Integrate security and compliance early (DevSecOps mindset).
-
-- Keep documentation lightweight but sufficient.
+The Software Development Life Cycle (SDLC) is a structured approach to building, testing, and deploying software.
 
 
 ## 4. SDLC Phases (Agile Context)
 
-**Phase** | **Agile Adaptation** | **Key Deliverables**
+| **Phase** | **Agile Adaptation** | **Key Deliverables** |
 
-Planning | Sprint planning, backlog refinement | Product backlog, sprint goals
+| Planning | Sprint planning, backlog refinement | Product backlog, sprint goals |
 
-Requirements  | User stories, acceptance criteria | Groomed backlog, prioritized stories
+| Requirements  | User stories, acceptance criteria | Groomed backlog, prioritized stories |
 
-Design | Collaborative design sessions, architecture spikes | UML diagrams, wireframes, architecture notes
+| Design | Collaborative design sessions, architecture spikes | UML diagrams, wireframes, architecture notes |
 
-Development | Pair programming, TDD, continuous integration | Source code, unit tests
+| Development | Pair programming, TDD, continuous integration | Source code, unit tests |
 
-Testing | Automated tests, exploratory testing | Test reports, defect logs
+| Testing | Automated tests, exploratory testing | Test reports, defect logs |
 
-Deployment | Continuous delivery pipeline | Release notes, deployment checklist
+| Deployment | Continuous delivery pipeline | Release notes, deployment checklist |
 
-Maintenance | Bug fixes, enhancements | Change requests, updated backlog
+| Maintenance | Bug fixes, enhancements | Change requests, updated backlog |
 
 
-### 4.1. PHASE ONE: Initiation
+### 4.1. Initiation Phase
 
 **Objective**: Surface, prioritize, and convert product ideas into a tracked story.
 
 The Product Team maintains a Backlog of ideas collected from users and stakeholders. In the Initiation Phase, the team selects a set of ideas to be developed. For each idea selected, the Product Owner drafts a brief story describing the proposed functionality. The system sets newly created stories to REQ status and automatically assigns the story to the author. The REQ status marks the transition to the Requirements Phase.
 
 
-### 4.2. PHASE TWO: Requirements
+### 4.2. Requirements Phase
 
 **Objective**: Turn a prioritized idea into a complete story.
 
@@ -75,7 +58,7 @@ The Product Owner gathers detailed requirements and completes the story — the 
 When the story is complete, the Product Owner assigns the story to a Developer on the Software Engineering Team and moves the story to DESIGN status.
 
 
-### 4.3. PHASE THREE: Design
+### 4.3. Design Phase
 
 **Objective**: Define a producible technical solution.
 
@@ -86,7 +69,7 @@ The Developer designs a technical solution and assigns the story to the Dev Lead
 - Approve the design, assign the story back to the Developer, and move the story to DEV status.
 
 
-### 4.4. PHASE FOUR: Development
+### 4.4. Development Phase
 
 **Objective**: Implement the design as executable code.
 
@@ -97,7 +80,7 @@ The Developer codes the solution and verifies its functionality locally. When re
 - Approve the coded solution, assign the story to a QA (Quality Assurance) Tester, and move the Story to QA status.
 
 
-### 4.5. PHASE FIVE: Testing
+### 4.5. Testing Phase
 
 **Objective**: Verify the functionality against the story’s Acceptance Criteria.
 
@@ -114,19 +97,14 @@ The UAT Tester executes user-focused testing scenarios, and then has two choices
 - Accept the solution, move the story to DEPLOY status, and assign it to the Product Owner.
 
 
-### 4.6. PHASE SIX: Deployment
+### 4.6. Deployment Phase
 
 **Objective: Obtain release approval and move validated code into Production.
 
 When a Story reaches DEPLOY status, the Product Owner requests release approval from the Change Advisory Board (CAB). After CAB approval, the Software Engineering and QA teams jointly execute the deployment to the PRODUCTION environment, and QA moves the story into DONE status.
 
 
-### 4.8. Retrospective
-
-A post-deployment retrospective is a meeting held shortly after a deployment to review the development and release process. The goal is to identify what went well, what could be improved, and create actionable steps for future iterations. This practice drives a culture of continuous improvement.
-
-
-### 4.9. Maintenance
+### 4.9. Maintenance Phase
 
 After a successful deployment, the software enters the longest phase of its lifecycle: maintenance. During this stage, the focus shifts from new feature development to ensuring the software's continued operation, security, and relevance.
 
