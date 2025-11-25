@@ -3,13 +3,17 @@
 
 ## 1. Introduction
 
-**Purpose**: Provide a clear, repeatable process for software development that ensures quality, transparency, and adaptability.
+1.1. Purpose
+This document provides a clear, repeatable process for software development that ensures quality, transparency, and adaptability.
 
-**Scope**: Applies to all projects managed by the Agile team, from small feature enhancements to new product development.
+1.2. Scope
+Applies to all projects managed by the Agile team, from small feature enhancements to new product development.
 
-**Audience**: Business Owners, Product Owners, Developers, QA Testers, Scrum Masters, UAT Testers, and stakeholders.
+1.3. Audience
+Product Owners, Developers, QA Testers, Scrum Masters, and stakeholders.
 
-**Standards Alignment**: Based on Agile principles, ISO/IEC 12207 (software lifecycle processes), and CMMI best practices.
+1.4. Standards Alignment
+This SDLC aligns with Agile principles, ISO/IEC 12207 (software lifecycle processes), and CMMI best practices.
 
 
 ## 2. SDLC Overview
@@ -34,8 +38,9 @@ The Software Development Life Cycle (SDLC) is a structured approach to building,
 
 **Objective**: Surface, prioritize, and convert product ideas into a tracked story.
 
-The Product Team maintains a Backlog of ideas collected from users and stakeholders. In the Initiation Phase, the team selects a set of ideas to be developed. For each idea selected, the Product Owner drafts a brief story describing the proposed functionality. The system sets newly created stories to REQ status and automatically assigns the story to the author. The REQ status marks the transition to the Requirements Phase.
+**Process**: The Product Team maintains an ongoing Backlog of ideas collected from users and stakeholders. In the Initiation Phase, the team selects a set of ideas to be developed. For each idea selected, the Product Owner drafts a brief story describing the proposed functionality. The system sets newly created stories to REQ status and automatically assigns the story to the author. The REQ status marks the transition to the Requirements Phase.
 
+**Artifacts**: Product backlog, sprint goals
 
 ### 3.2. Requirements Phase
 
